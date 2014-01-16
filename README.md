@@ -3,7 +3,7 @@ guice-ext
 a guice ext for auto bind and install module
 
 =========
-1.``@AutoBind`` , ``@Named``
+1.``@AutoBind`` , ``@Named`` 
 ````
 @AutoBind
 @Named("mysql")
@@ -18,8 +18,8 @@ public class OracleBaseDAOImpl implements BaseDAO{
 	....
 }
 
-
 ````
+if you don't want to bind class use ``@NoBind``.
 
 2.inject use
 ````
@@ -38,7 +38,19 @@ public class BaseServiceImpl implements BaseService{
 	}
 }
 ````
-3.init 
+3.``@GuiceModule``
+````
+@GuiceModule
+public class ExampleModule extends AbstractModule {
+
+	@Override
+	protected void configure() {
+		bind(ExampleDAO.class).to(ExampleDAOImpl.class);
+		//or other things
+	}
+}
+````
+4.init 
 ````
 install(new AutoBindModule());
 install(new AutoInstallModule());
