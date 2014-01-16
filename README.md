@@ -57,7 +57,7 @@ public class ExampleModule extends AbstractModule {
 	}
 }
 ````
-4.init 
+4.guice init 
 ````
 install(new AutoBindModule());
 install(new AutoInstallModule());
