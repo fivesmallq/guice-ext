@@ -22,9 +22,9 @@ import eu.infomas.annotation.AnnotationDetector.TypeReporter;
 /**
  * 注解类扫描工具.
  * 
- * @author <a href="mailto:wuzhiqiang@novacloud.com">wuzq</a>
- * @date 2013-6-8上午10:41:53
- * @version Revision: 1.5
+ * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
+ * @date 2014-1-17上午12:35:16
+ * @version Revision: 1.0
  */
 public class AnnotationClassScanner {
 	private static final Log LOG = Logs.get();

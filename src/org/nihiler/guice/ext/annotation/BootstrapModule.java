@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
 /**
  * 声明这个注解的类,会覆盖框架默认的启动模块.
  * 
- * @author <a href="mailto:wuzhiqiang@novacloud.com">wuzq</a>
- * @date 2013-6-8上午11:13:11
- * @version Revision: 1.5
+ * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
+ * @date 2014-1-17上午12:34:39
+ * @version Revision: 1.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE })

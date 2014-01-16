@@ -14,9 +14,9 @@ import com.google.inject.Module;
 /**
  * 自动把标记了{@link GuiceModule} 注解的module装载.
  * 
- * @author <a href="mailto:wuzhiqiang@novacloud.com">wuzq</a>
- * @date 2013-9-8下午7:52:24
- * @version Revision: 1.3
+ * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
+ * @date 2014-1-17上午12:35:51
+ * @version Revision: 1.0
  */
 public class AutoInstallModule extends AbstractModule {
 	private static final Log LOG = Logs.get();

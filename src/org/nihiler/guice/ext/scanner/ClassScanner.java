@@ -13,9 +13,9 @@ import org.nihiler.guice.ext.util.ClassPath.ClassInfo;
 /**
  * 扫描所有的指定包下面的class.
  * 
- * @author <a href="mailto:wuzhiqiang@novacloud.com">wuzq</a>
- * @date 2013-6-6上午9:52:33
- * @version Revision: 1.5
+ * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
+ * @date 2014-1-17上午12:35:29
+ * @version Revision: 1.0
  */
 public class ClassScanner {
 	private static final Log LOG = Logs.get();
