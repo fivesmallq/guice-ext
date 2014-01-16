@@ -2,6 +2,13 @@ guice-ext
 =========
 a guice ext for auto bind and install module
 
+annotation-detector:https://github.com/rmuller/infomas-asl
+
+reflect:https://github.com/jOOQ/jOOR
+
+logging:https://github.com/netty/netty/tree/master/common/src/main/java/io/netty/util/internal/logging
+
+
 =========
 1.``@AutoBind`` , ``@Named`` 
 ````
