@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Guice-ext by fivesmallq</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Guice-ext</h1>
+        <p class="header">a guice ext for auto bind and install module</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/fivesmallq/guice-ext/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/fivesmallq/guice-ext/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/fivesmallq/guice-ext">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/fivesmallq">fivesmallq</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="guice-ext" class="anchor" href="#guice-ext"><span class="octicon octicon-link"></span></a>guice-ext</h1>
+
+<p>a guice ext for auto bind and install module</p>
+
+<p>annotation-detector:<a href="https://github.com/rmuller/infomas-asl">https://github.com/rmuller/infomas-asl</a></p>
+
+<p>reflect:<a href="https://github.com/jOOQ/jOOR">https://github.com/jOOQ/jOOR</a></p>
+
+<p>logging:<a href="https://github.com/netty/netty/tree/master/common/src/main/java/io/netty/util/internal/logging">https://github.com/netty/netty/tree/master/common/src/main/java/io/netty/util/internal/logging</a></p>
+
+<h1></h1>
+
+<p>1.<code>@AutoBind</code> , <code>@Named</code> </p>
+
+<pre><code>@AutoBind
+@Named("mysql")
+public class MysqlBaseDAOImpl implements BaseDAO{
+    ....
+}
+
+
+@AutoBind
+@Named("oracle")
+public class OracleBaseDAOImpl implements BaseDAO{
+    ....
+}
+
+</code></pre>
+
+<p>if you don't want to bind class use <code>@NoBind</code>.</p>
+
+<p>2.inject use</p>
+
+<pre><code>public class BaseServiceImpl implements BaseService{
+    @Inject
+    @Named("mysql")
+    private BaseDAO mysqlDAO;
+
+    @Inject
+    @Named("oracle")
+    private BaseDAO oracleDAO;
+
+    public void test(){
+        mysqlDAO.test();
+        oracleDAO.test();
+    }
+}
+</code></pre>
+
+<p>3.<code>@GuiceModule</code></p>
+
+<pre><code>@GuiceModule
+public class ExampleModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        bind(ExampleDAO.class).to(ExampleDAOImpl.class);
+        //or other things
+    }
+}
+</code></pre>
+
+<p>4.guice init </p>
+
+<pre><code>install(new AutoBindModule());
+install(new AutoInstallModule());
+</code></pre>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
