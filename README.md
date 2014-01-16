@@ -2,6 +2,11 @@ guice-ext
 =========
 a guice ext for auto bind and install module
 
+annotation-detector:https://github.com/rmuller/infomas-asl
+
+reflect:https://github.com/jOOQ/jOOR
+
+
 =========
 1.``@AutoBind`` , ``@Named`` 
 ````
