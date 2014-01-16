@@ -4,4 +4,7 @@
 *.jar
 *.war
 *.ear
+<<<<<<< HEAD
 /build
+=======
+>>>>>>> refs/remotes/origin/master
