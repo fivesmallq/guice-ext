@@ -62,3 +62,4 @@ install(new AutoBindModule());
 install(new AutoInstallModule());
 ````
 
+0.0.1 :https://github.com/fivesmallq/guice-ext/releases/download/0.1/guice-ext-0.0.1-SNAPSHOT.jar
